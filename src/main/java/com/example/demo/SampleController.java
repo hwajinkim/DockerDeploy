@@ -9,6 +9,6 @@ public class SampleController {
 
     @RequestMapping("/sample")
     public String sample(){
-        return "Sample!!!";
+        return "Sample ci/cd 구축 완료했다아아아";
     }
 }
