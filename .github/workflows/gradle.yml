@@ -24,10 +24,7 @@ jobs:
 
     # 2. Spring Boot 애플리케이션 빌드
     - name: Build with Gradle
-      uses: gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5 
-      with:
-        arguments: clean bootJar
-
+      run: ./gradlew build
     # 3. Docker 이미지 빌드
     - name: docker image build
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/sample:0.0.2 .
